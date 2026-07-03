@@ -8,17 +8,11 @@ project(
 )
 
 # --------------------------------------------------------------------
-# C++ Standard
+# Global Configuration
 # --------------------------------------------------------------------
 
-target_compile_features(TradeCore PRIVATE cxx_std_20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-# Generate compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Default build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
 endif()
@@ -27,14 +21,27 @@ endif()
 # Executable
 # --------------------------------------------------------------------
 
-add_executable(
-    TradeCore
+add_executable(TradeCore
     src/main.cpp
+    src/model/Order.cpp
+    src/model/PriceLevel.cpp
+)
+
+target_include_directories(
+    TradeCore
+    PRIVATE
+        include
 )
 
 # --------------------------------------------------------------------
-# Compiler Warnings
+# Target Configuration
 # --------------------------------------------------------------------
+
+target_compile_features(
+    TradeCore
+    PRIVATE
+        cxx_std_20
+)
 
 target_compile_options(
     TradeCore
