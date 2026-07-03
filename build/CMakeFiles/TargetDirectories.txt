@@ -1,0 +1,3 @@
+/home/asif/projects/TradeCore/build/CMakeFiles/TradeCore.dir
+/home/asif/projects/TradeCore/build/CMakeFiles/edit_cache.dir
+/home/asif/projects/TradeCore/build/CMakeFiles/rebuild_cache.dir
