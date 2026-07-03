@@ -11,7 +11,7 @@ project(
 # C++ Standard
 # --------------------------------------------------------------------
 
-set(CMAKE_CXX_STANDARD 20)
+target_compile_features(TradeCore PRIVATE cxx_std_20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
