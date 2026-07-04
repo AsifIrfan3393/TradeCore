@@ -6,11 +6,14 @@
 namespace tradecore
 {
 
-void PriceLevel::addOrder(Order order)
+PriceLevel::OrderIterator
+PriceLevel::addOrder(Order order)
 {
     totalQuantity_ += order.remainingQuantity();
 
     orders_.push_back(std::move(order));
+
+    return std::prev(orders_.end());
 }
 
 void PriceLevel::removeFront()

@@ -25,6 +25,8 @@ add_executable(TradeCore
     src/main.cpp
     src/model/Order.cpp
     src/model/PriceLevel.cpp
+    src/model/OrderBook.cpp
+    src/matching/MatchingEngine.cpp
 )
 
 target_include_directories(
